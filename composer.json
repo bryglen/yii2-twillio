@@ -1,0 +1,22 @@
+{
+    "name": "bryglen/yii2-twillio",
+    "description": "yii 2 twillio integration",
+    "type": "yii2-extension",
+    "keywords": ["yii2"," extension","twillio"," php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bryan Tan",
+            "email": "bryantan16@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "twilio/sdk": "5.2.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "bryglen\\twillio\\": ""
+        }
+    }
+}
