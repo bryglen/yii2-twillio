@@ -14,6 +14,7 @@ class Twillio extends Component
     public $token;
 
     private $_client = null;
+    private $_clientCapability = null;
 
     public function init()
     {
@@ -34,5 +35,16 @@ class Twillio extends Component
         }
 
         return $this->_client;
+    }
+
+    public function getClientCapability()
+    {
+        if ($this->_clientCapability === null) {
+            $client = new \Services_Twilio_Capability($this->sid, $this->token);
+
+            $this->_clientCapability = $client;
+        }
+
+        return $this->_clientCapability;
     }
 } 
