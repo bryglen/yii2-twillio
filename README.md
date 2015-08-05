@@ -30,7 +30,7 @@ Once the extension is installed, you should configure it in the application conf
 ```php
 'components' => [
     'twillio' => [
-        'class' => 'bryglen\braintree\Braintree',
+        'class' => 'bryglen\yii2-twillio\Twillio',
         'sid' => 'your_sid',
         'token' => 'your_token',
     ]
@@ -41,7 +41,7 @@ Once the extension is installed, you should configure it in the application conf
 
 ```php
 $twillio = Yii::$app->twillio;
-$twillio->getClient()->account->messages->sendMessage(
+$message = $twillio->getClient()->account->messages->sendMessage(
     '9991231234', // From a valid Twilio number
     '8881231234', // Text this number
     "Hello monkey!"
